@@ -9,7 +9,7 @@ data model as well as any custom migrations.
 @leandroalonso 2019-09-27
 -`AbstractPost`: Added `autoUploadAttemptsCount` property.
 @shiki 2019-10-03
--`AbstractPost`: Added `statusBeforeUpload` property (`nullable`, `String`). Adds a custom migration, `PostToPostMigration90to91`.
+-`AbstractPost`: Added `statusAfterSync` property (`nullable`, `String`). Adds a custom migration for both `Post` and `Page` entities.
 
 ## WordPress 90
 

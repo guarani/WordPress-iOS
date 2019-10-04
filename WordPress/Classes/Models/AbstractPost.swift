@@ -29,28 +29,22 @@ extension AbstractPost {
         }
     }
 
-    var statusBeforeUpload: Status? {
+    var statusAfterSync: Status? {
         get {
-            return rawValue(forKey: "statusBeforeUpload")
+            return rawValue(forKey: "statusAfterSync")
         }
         set {
-            setRawValue(newValue, forKey: "statusBeforeUpload")
+            setRawValue(newValue, forKey: "statusAfterSync")
         }
     }
 
-    @objc(statusBeforeUpload)
-    var statusBeforeUploadString: String? {
+    @objc(statusAfterSync)
+    var statusAfterSyncString: String? {
         get {
-            return statusBeforeUpload?.rawValue
+            return statusAfterSync?.rawValue
         }
         set {
-            statusBeforeUpload = newValue.flatMap { Status(rawValue: $0) }
-        }
-    }
-
-    func setStatusBeforeUploadToCurrentStatusIfNil() {
-        if let status = status, statusBeforeUpload == nil {
-            statusBeforeUpload = status
+            statusAfterSync = newValue.flatMap { Status(rawValue: $0) }
         }
     }
 
