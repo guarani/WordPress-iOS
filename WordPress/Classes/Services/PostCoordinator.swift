@@ -352,7 +352,7 @@ extension PostCoordinator: Uploader {
             }
         }
     }
-    
+
     private func trackAutoUpload(action: PostAutoUploadInteractor.AutoUploadAction, status: BasePost.Status) {
         WPAnalytics.track(.autoUploadPostInvoked, withProperties:
             ["upload_action": action.rawValue,

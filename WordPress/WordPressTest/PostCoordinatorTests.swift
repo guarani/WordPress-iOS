@@ -130,7 +130,7 @@ class PostCoordinatorTests: XCTestCase {
 
         expect(post.status).to(equal(.publish))
     }
-    
+
     func testTracksAutoUploadPostInvoked() {
         let postServiceMock = PostServiceMock(managedObjectContext: context)
         let postCoordinator = PostCoordinator(mainService: postServiceMock, backgroundService: postServiceMock)
