@@ -725,6 +725,8 @@ const NSUInteger PostServiceDefaultNumberToSync = 40;
         postPost.publicizeMessageID = publicizeMessageID;
         postPost.disabledPublicizeConnections = disabledPublicizeConnections;
     }
+
+    post.statusBeforeUpload = post.status;
 }
 
 - (RemotePost *)remotePostWithPost:(AbstractPost *)post
